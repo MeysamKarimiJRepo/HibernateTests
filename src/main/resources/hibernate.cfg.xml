@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:XEPDB1</property>
+		<property name="connection.username">JONHY</property>
+		<property name="connection.password">1234</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache -->
+
+		<!-- Enable the second level cache -->
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+<!--		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>-->
+<!--		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>-->
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">create</property>
+
+		<!-- <property name="hibernate.search.default.directory_provider">filesystem</property> 
+			<property name="hibernate.search.default.indexBase">target/indexes</property> -->
+		<mapping class="org.example.entity.Person" />
+		<mapping class="org.example.entity.Vehicle" />
+		<mapping class="org.example.entity.Phone" />
+		<mapping class="org.example.entity.House" />
+		<mapping class="org.example.entity.Owner" />
+		<mapping class="org.example.entity.CarOwner" />
+		<mapping class="org.example.entity.Car" />
+		<mapping class="org.example.entity.TwoWheeler" />
+		<mapping class="org.example.entity.FourWheeler" />
+
+
+	</session-factory>
+</hibernate-configuration>
+
+

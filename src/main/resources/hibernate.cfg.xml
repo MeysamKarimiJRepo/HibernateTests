@@ -7,8 +7,8 @@
 	<session-factory>
 
 		<property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
-		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:XEPDB1</property>
-		<property name="connection.username">JONHY</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521/XEPDB1</property>
+		<property name="connection.username">JOHNY</property>
 		<property name="connection.password">1234</property>
 
 		<!-- JDBC connection pool (use the built-in) -->
@@ -32,6 +32,7 @@
 
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
+<!--		<property name="hibernate.default_schema">JOHNY</property>-->
 
 		<!-- <property name="hibernate.search.default.directory_provider">filesystem</property> 
 			<property name="hibernate.search.default.indexBase">target/indexes</property> -->

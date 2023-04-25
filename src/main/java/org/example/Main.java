@@ -12,7 +12,7 @@ import org.hibernate.service.ServiceRegistry;
  */
 public class Main {
 
-    static ChessPlayer userObj;
+//    static ChessPlayer userObj;
     static Session sessionObj;
     static SessionFactory sessionFactoryObj;
 
@@ -36,13 +36,13 @@ public class Main {
             sessionObj.beginTransaction();
 
             for (int i = 101; i <= 105; i++) {
-                userObj = new ChessPlayer();
+//                userObj = new ChessPlayer();
 //                userObj.setUserid(i);
 //                userObj.setUsername("Editor " + i);
 //                userObj.setCreatedBy("Administrator");
 //                userObj.setCreatedDate(new Date());
 
-                sessionObj.save(userObj);
+//                sessionObj.save(userObj);
             }
             System.out.println("\n.......Records Saved Successfully To The Database.......\n");
 
